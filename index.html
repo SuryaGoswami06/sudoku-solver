@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sudoku solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Sudoku Solver - Solve Any Sudoku Puzzle Instantly">
+    <meta name="description" content="Solve any Sudoku puzzle instantly with our free online Sudoku solver. Input your puzzle or choose from pre-filled puzzles ranging from easy to hard">
+    <meta name="keywords" content="Sudoku solver, online Sudoku solver, Sudoku puzzle solver, free Sudoku solver, interactive Sudoku input, custom Sudoku entry, pre-filled Sudoku puzzles, easy to hard Sudoku puzzles">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="surya goswami">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>sudoku solver</header>
+    <main>
+        <div id="container">
+            <div id="sudoku">
+            </div>
+            <div id="feedbackContainer">
+                  <div id="errorMessageWrapper" class="inputStatus">
+                        <img src="./images/error-icon.png" height="24" width="24" alt="error-icon" loading="lazy">
+                        <p></p>
+                  </div>
+                  <div id="correctMessageWrapper" class="inputStatus">
+                          <img src="./images/correct-icon.png" height="21" width="21" alt="correct-icon" loading="lazy">
+                          <p></p>
+                  </div>
+            </div>
+            <div id="buttons">
+                <button type="button" onclick="solve()">solve</button>
+                <button type="button" onclick="reset()">reset</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

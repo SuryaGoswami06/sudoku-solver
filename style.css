@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html,main{
+    height: 100%;
+    width: 100%;
+}
+:root{
+   --border: 1px solid #333;
+   --cell-width:40px;
+   --cell-height:40px;
+   --error-color:#FF0000;
+   --correct-color:#48B02C;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+
+
+.error-row{
+    border: 2px solid#FF0000 !important;
+}
+.error-col{
+    border: 2px solid#FF0000 !important;
+}
+
+
+
+header{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 15px 15px 28px 15px;
+}
+main{
+   display: flex;
+   justify-content: center;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 362px;
+}
+
+#sudoku{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: var(--border);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.row:not(:last-child){
+  border-bottom: var(--border);
+}
+.row:not(:last-child):nth-of-type(3n){
+    border-bottom:2px solid #333;
+}
+.cell{
+    width: var(--cell-width);
+    height: var(--cell-height);
+    border: none;
+    text-align: center;
+    font-size: 16px;
+}
+.cell:not(:last-child){
+ border-right: 1px solid #333;
+}
+.cell:not(:last-child):nth-of-type(3n){
+    border-right: 2px solid #333;
+}
+.cell:focus{
+    border: 2px solid #333;
+}
+
+#buttons{
+    display: flex;
+    margin-top: 7px;
+    button{
+        margin-right: 15px;
+        width: 100px;
+        height: 41px;
+        text-transform: capitalize;
+        background-color: #fff;
+        cursor: pointer;
+        border: .2px solid #333;
+        border-radius: 100px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+#feedbackContainer{
+   padding: 10px 0 20px 0;
+   height: 26px;
+}
+.inputStatus {
+    position: relative;
+    img,p{
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        margin-right: 5px;
+        object-fit: contain;
+    }
+    p{
+        left: 30px;
+    }
+}
+
+#errorMessageWrapper p{
+    color: var(--error-color);
+}
+#correctMessageWrapper p{
+    color: var(--correct-color);
+}
+#errorMessageWrapper,
+#correctMessageWrapper{
+    display: none;
+}
